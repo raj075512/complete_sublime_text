@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+void dfs(int cur,vector<vector<int>>&adj, int n,vector<int>&vis,vector<int>&res)
+{
+    vis[cur]=1;
+    res.push_back(cur);
+    for(auto &it:adj[cur])
+    {
+        if(!vis[it])
+        {
+            dfs(it,adj,n,vis,res);
+        }
+    }
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dfs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+int biner_search(int s, int e, int tar, vector<int>&arr)
+{
+    while(s<=e)
+    {
+        int mid=s+(e-s)/2;
+        if(arr[mid]==tar)
+         {
+            return mid;
+         }else if(arr[mid]<tar)
+         {
+          s=mid+1;
+         }else
+         {
+          e=mid-1;
+         }
+
+    }
+    
+    return -1;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>binery_search_idx</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

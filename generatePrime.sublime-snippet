@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+vector<int> isPrime;
+
+void generatePrimes() {
+    if (!isPrime.empty()) return;
+    isPrime.resize(1e5 + 1, 1);
+    isPrime[0] = isPrime[1] = 0;
+    for (int i = 2; i <= 1e5; i++) {
+        if (isPrime[i]) {
+            for (int j = 2 * i; j <= 1e5; j += i) {
+                isPrime[j] = 0;
+            }
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>generatePrime</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
